@@ -9,9 +9,9 @@ public:
 
         int maxArea = 0;
 
-        for(int i = 0; i < matrix.size(); i++){
+        for(int x = 0; x < matrix.size(); x++){
             for(int j = 0; j < n; j++){
-                if(matrix[i][j] == '1') height[j] = height[j] + 1;
+                if(matrix[x][j] == '1') height[j] = height[j] + 1;
                 else height[j] = 0;
             }
 
