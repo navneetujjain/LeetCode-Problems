@@ -7,7 +7,7 @@ public:
 
         if(n == 1) return 1;
 
-        for(int i = 0; i < n - 1; i++){
+        for(int i = 0; i < n; i++){
             unordered_map<double, int> mpp;
             for(int j = 0; j < n; j++){
 
