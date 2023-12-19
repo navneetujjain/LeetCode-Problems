@@ -2,34 +2,32 @@ class Solution {
 public:
     
     bool checkInclusion(string s1, string s2) {
-        if (s1.size() > s2.size()) return false;
+        if(s1.size() > s2.size()) return false;
+        unordered_map<char, int> mpp;
 
-        unordered_map<char, int> count;
-        for (char c : s1) {
-            count[c]++;
-        }
+        for(char it : s1) mpp[it]++;
 
-        int left = 0, right = 0;
-        int requiredChars = s1.size();
 
-        while (right < s2.size()) {
-            if (count[s2[right]] > 0) {
-                requiredChars--;
+        int left = 0, right = 0, req = s1.size();
+
+        while(right < s2.size()){
+            if(mpp[s2[right]] > 0){
+                req--;
             }
-            count[s2[right]]--;
+
+            mpp[s2[right]]--;
             right++;
 
-            if (requiredChars == 0) {
-                return true;
-            }
+            if(req == 0) return true;
 
-            if (right - left == s1.size()) {
-                if (count[s2[left]] >= 0) {
-                    requiredChars++;
-                }
-                count[s2[left]]++;
+            if(right - left == s1.size()){
+                if(mpp[s2[left]] >= 0){
+                req++;
+            }
+                mpp[s2[left]]++;
                 left++;
             }
+
         }
 
         return false;
