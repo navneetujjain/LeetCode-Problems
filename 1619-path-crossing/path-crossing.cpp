@@ -10,10 +10,10 @@ public:
             else if(it == 'E') x += 1;
             else x -= 1;
 
-            if(stt.find({x, y}) != stt.end()) return true;
+            //if(stt.find({x, y}) != stt.end()) return true;
             stt.insert({x, y});
         }
 
-        return false;
+        return stt.size() - 1 != path.size();
     }
 };
