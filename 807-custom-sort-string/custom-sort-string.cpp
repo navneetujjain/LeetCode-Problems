@@ -1,7 +1,7 @@
 class Solution {
 public:
     string customSortString(string order, string s) {
-        std::unordered_map<char, int> charCount;
+        unordered_map<char, int> charCount;
         for (char c : order) {
             charCount[c] = 0;
         }
@@ -12,7 +12,7 @@ public:
             }
         }
         
-        std::string sortedS;
+        string sortedS;
         for (char c : order) {
             sortedS.append(charCount[c], c);
         }
