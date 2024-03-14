@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/frequency-of-the-most-frequent-element">1966. Frequency of the Most Frequent Element</a></h2><h3>Medium</h3><hr><p>The <strong>frequency</strong> of an element is the number of times it occurs in an array.</p>
+<h2><a href="https://leetcode.com/problems/frequency-of-the-most-frequent-element">Frequency of the Most Frequent Element</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>The <strong>frequency</strong> of an element is the number of times it occurs in an array.</p>
 
 <p>You are given an integer array <code>nums</code> and an integer <code>k</code>. In one operation, you can choose an index of <code>nums</code> and increment the element at that index by <code>1</code>.</p>
 
